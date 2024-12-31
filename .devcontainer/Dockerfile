@@ -7,8 +7,9 @@ RUN pip install --no-cache-dir pyporscheconnectapi
 # Create working directory
 WORKDIR /app
 
-# Copy the Bash script
-# COPY poll_status.sh .
+# Copy over script, make executable
+COPY app /app
+RUN chmod +x /app/poll_data.sh
 
 # Create a volume for data
 VOLUME ["/data"]

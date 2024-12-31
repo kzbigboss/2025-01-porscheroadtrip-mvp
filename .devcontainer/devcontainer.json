@@ -6,8 +6,8 @@
 	},
 	"runArgs": [
 		"-v", "${localWorkspaceFolder}/data:/data",
-		"-v", "temp_data:/app/temp"
+		"-v", "/app/temp"
 	  ],
 	"remoteUser": "root",
-	"postCreateCommand": "cd app && porschecli currentoverview -a"
+	"postCreateCommand": "cd /app && ./poll_data.sh"
   }
