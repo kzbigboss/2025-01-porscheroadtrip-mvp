@@ -1,0 +1,20 @@
+{
+	"name": "kzporsche-tracker",
+	"build": {
+	  "dockerfile": "Dockerfile",
+	  "context": ".."
+	},
+	"runArgs": [
+		"-v", "${localWorkspaceFolder}/data:/data",
+		"-v", "${localWorkspaceFolder}/.porscheconnect.cfg:/app/.porscheconnect.cfg"
+	  ],
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "ms-python.python"
+		]
+	  }
+	},
+	"remoteUser": "root",
+	"postCreateCommand": "porschecli currentoverview -a"
+  }
