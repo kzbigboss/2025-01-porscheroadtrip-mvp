@@ -6,15 +6,8 @@
 	},
 	"runArgs": [
 		"-v", "${localWorkspaceFolder}/data:/data",
-		"-v", "${localWorkspaceFolder}/.porscheconnect.cfg:/app/.porscheconnect.cfg"
+		"-v", "temp_data:/app/temp"
 	  ],
-	"customizations": {
-	  "vscode": {
-		"extensions": [
-		  "ms-python.python"
-		]
-	  }
-	},
 	"remoteUser": "root",
-	"postCreateCommand": "porschecli currentoverview -a"
+	"postCreateCommand": "cd app && porschecli currentoverview -a"
   }
