@@ -1,3 +1,9 @@
+# 2024-12-31T13:19:15
+
+Got the first pass of a functional container. Current problem is when I add the `postCreateCommand` to the config to fire a porschecli. I'm using file `.porscheconnect.cfg` to host the email/password necessary to reach Porsche Connect. I also need to provide a path to a session file where it stores auth tokens. If I manually enter the container and run the command, I'll see it create a session file and commands are successful. When I push the command into `postCreateCommand`, the session file isn't created and the command times out.
+
+Going to undo the `postCreateCommand` config and work within the container to figure out what's happening.
+
 # 2024-12-31T11:56:42
 
 This is the start of another road trip data project! Prior road trips were able to rely on unofficial Tesla APIs to gather data. These next couple road trips are with a Porsche. Fortunately there's the Porsche Connect service [1] available that can act as a live data source. Unfortunately, similar to my previous Tesla road trips, there's no official API access for personal use.
