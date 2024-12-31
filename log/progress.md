@@ -1,3 +1,9 @@
+# 2024-12-31T16:55:22
+
+Moved the credentials out of `.porscheconnect.cfg` and into various environment variables. Was successfully polling data. Moved the execution into a script so I could start adding to it (eg: dump to file, push to S3, ect).
+
+Starting getting captcha errors. I suspect hitting the API enough caused it to start requesting a captcha to be solved. Going to take a break and see if the API accepts connections later.
+
 # 2024-12-31T13:19:15
 
 Got the first pass of a functional container. Current problem is when I add the `postCreateCommand` to the config to fire a porschecli. I'm using file `.porscheconnect.cfg` to host the email/password necessary to reach Porsche Connect. I also need to provide a path to a session file where it stores auth tokens. If I manually enter the container and run the command, I'll see it create a session file and commands are successful. When I push the command into `postCreateCommand`, the session file isn't created and the command times out.

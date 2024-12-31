@@ -6,7 +6,8 @@
 	},
 	"runArgs": [
 		"-v", "${localWorkspaceFolder}/data:/data",
-		"-v", "/app/temp"
+		"-v", "/app/temp",
+		"--env-file", "${localWorkspaceFolder}/.env"
 	  ],
 	"remoteUser": "root",
 	"postCreateCommand": "cd /app && ./poll_data.sh"
