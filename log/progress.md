@@ -1,3 +1,6 @@
+# 2025-01-03T14:28:40
+Unfortunately, I’m going to put this project on pause. I got a response from some of the repo maintainers that the capture response feature is not yet implemented. They gave me a couple of examples to look at, so I might consider a contribution to the repo, but for now, I’m going to focus on what I need to do to get GPS data for my car.
+
 # 2024-12-31T16:55:22
 
 Moved the credentials out of `.porscheconnect.cfg` and into various environment variables. Was successfully polling data. Moved the execution into a script so I could start adding to it (eg: dump to file, push to S3, ect).
